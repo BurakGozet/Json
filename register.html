@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Json Uye Giris Sistemi</title>
+    <script type="text/javascript">
+      'use strict';
+      function Register(){
+        var UserName = document.getElementById("username").value;
+        var Pass = document.getElementById("pass").value;
+        var Email= document.getElementById("Email").value;
+        
+        if (UserName.length == 0 || Pass.length == 0 || Email.length == 0) {
+          alert("Boş Alan Bırakmayınız.");
+        } else {
+          alert("Başariyla Kayit Olundu.");
+          document.cookie = UserName;
+          window.location = "home.html";
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <label>Kullanıcı Adı:</label>
+      <br/>
+      <input type="text" name="UserName" id="username"/>
+      <br/>
+      <br/>
+      <label>Email:</label>
+      <br/>
+      <input type="text" name="Email" id="Email"/>
+      <br/>
+      <br/>
+      <label>Sifre:</label>
+      <br/>
+      <input type="password" name="Password" id="pass"/>
+      <br/>
+      <br/>
+      <button id="submit" onClick="Register()">Kayıt Ol</button>
+      <a href="index.html">Giriş Yap</a>
+  </body>
+</html>
